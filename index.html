@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sheel Bhatt | Full Stack MERN Developer</title>
+<meta name="description" content="Portfolio of Sheel Bhatt — BSc IT student & MERN Stack Developer specializing in React.js, Node.js and Express.js." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ================= CUSTOM CURSOR GLOW ================= -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ================= BACKGROUND LAYERS ================= -->
+<div class="bg-wrap" aria-hidden="true">
+  <div class="aurora aurora-1"></div>
+  <div class="aurora aurora-2"></div>
+  <div class="aurora aurora-3"></div>
+  <div class="grid-overlay"></div>
+  <canvas id="particles"></canvas>
+</div>
+
+<!-- ================= LOADER ================= -->
+<div class="loader" id="loader">
+  <div class="loader-ring"></div>
+  <span class="loader-code">&lt;SB/&gt;</span>
+</div>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">
+      <span class="logo-bracket">&lt;</span>Sheel<span class="logo-accent">.dev</span><span class="logo-bracket">/&gt;</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active" data-section="home">Home</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#education" class="nav-link" data-section="education">Education</a>
+      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="#services" class="nav-link" data-section="services">Services</a>
+      <a href="#certificates" class="nav-link" data-section="certificates">Certificates</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="assets/Sheel_Bhatt_Resume.pdf" download class="btn btn-ghost nav-resume">
+        <i class="fa-solid fa-download"></i><span>Resume</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= MOBILE MENU ================= -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" class="mobile-link">Home</a>
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#education" class="mobile-link">Education</a>
+  <a href="#projects" class="mobile-link">Projects</a>
+  <a href="#skills" class="mobile-link">Skills</a>
+  <a href="#services" class="mobile-link">Services</a>
+  <a href="#certificates" class="mobile-link">Certificates</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+  <a href="assets/Sheel_Bhatt_Resume.pdf" download class="btn btn-primary mobile-resume">Download Resume</a>
+</div>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+
+    <div class="hero-text reveal">
+      <p class="eyebrow"><span class="dot"></span> Available for Internships &amp; Freelance</p>
+      <h1 class="hero-title">
+        Hi, I'm <span class="gradient-text">Sheel Bhatt</span>
+      </h1>
+      <h2 class="hero-role">
+        <span id="typedText"></span><span class="cursor-blink">|</span>
+      </h2>
+      <p class="hero-desc">
+        BSc IT student specializing in <strong>Cloud &amp; Application Development</strong>,
+        building responsive, full‑stack web applications with the MERN stack —
+        React.js, Node.js, Express.js &amp; MongoDB.
+      </p>
+
+      <div class="hero-cta">
+        <a href="assets/Sheel_Bhatt_Resume.pdf" download class="btn btn-primary">
+          <i class="fa-solid fa-download"></i> Download Resume
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fa-solid fa-paper-plane"></i> Get In Touch
+        </a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/sheelbhatt/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/sheelbhatt" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="mailto:spbhatt1303@gmail.com" class="social-btn" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="tel:+916353375115" class="social-btn" aria-label="Phone">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="orbit-ring ring-1"></div>
+      <div class="orbit-ring ring-2"></div>
+      <div class="profile-glow">
+        <div class="profile-frame">
+          <img src="assets/profile.png" alt="Sheel Bhatt" />
+        </div>
+      </div>
+      <div class="float-chip chip-1"><i class="fa-brands fa-react"></i> React.js</div>
+      <div class="float-chip chip-2"><i class="fa-brands fa-node-js"></i> Node.js</div>
+      <div class="float-chip chip-3"><i class="fa-solid fa-database"></i> MongoDB</div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll down">
+    <span>Scroll</span>
+    <div class="mouse"><div class="wheel"></div></div>
+  </a>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section" id="about">
+  <div class="section-head reveal">
+    <p class="section-tag">01 · About Me</p>
+    <h2 class="section-title">Turning ideas into <span class="gradient-text">functional interfaces</span></h2>
+  </div>
+
+  <div class="about-grid">
+    <div class="glass-card about-text reveal">
+      <p>
+        I'm Sheel — a BSc IT student at Gujarat University, currently specializing in
+        <strong>Cloud &amp; Application Development</strong>. I enjoy the full journey of building
+        a product: designing the UI in React, wiring up REST APIs with Node.js and Express,
+        and persisting everything cleanly in MongoDB.
+      </p>
+      <p>
+        Over the past year I've built dashboards, CRUD systems and full MERN‑stack practice
+        apps, and completed a hands‑on Full Stack Development internship at
+        Grras IT Solutions. I like clean, responsive UIs and code that's easy to reason about.
+      </p>
+
+      <div class="about-info">
+        <div class="info-row"><i class="fa-solid fa-graduation-cap"></i><span>Gujarat University, Ahmedabad</span></div>
+        <div class="info-row"><i class="fa-solid fa-location-dot"></i><span>Ahmedabad, Gujarat, India</span></div>
+        <div class="info-row"><i class="fa-solid fa-envelope"></i><span>spbhatt1303@gmail.com</span></div>
+        <div class="info-row"><i class="fa-solid fa-phone"></i><span>+91 63533 75115</span></div>
+      </div>
+    </div>
+
+    <div class="counters reveal">
+      <div class="glass-card counter-card">
+        <div class="counter-num" data-target="3">0</div>
+        <div class="counter-label">Projects Built</div>
+        <i class="fa-solid fa-diagram-project counter-icon"></i>
+      </div>
+      <div class="glass-card counter-card">
+        <div class="counter-num" data-target="8">0</div>
+        <div class="counter-label">Core Technologies</div>
+        <i class="fa-solid fa-code counter-icon"></i>
+      </div>
+      <div class="glass-card counter-card">
+        <div class="counter-num" data-target="2">0</div>
+        <div class="counter-label">Months Internship</div>
+        <i class="fa-solid fa-briefcase counter-icon"></i>
+      </div>
+      <div class="glass-card counter-card">
+        <div class="counter-num" data-target="7">0</div>
+        <div class="counter-label">Semester (Ongoing)</div>
+        <i class="fa-solid fa-book-open counter-icon"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION + INTERNSHIP TIMELINE ================= -->
+<section class="section" id="education">
+  <div class="section-head reveal">
+    <p class="section-tag">02 · Journey</p>
+    <h2 class="section-title">Education &amp; <span class="gradient-text">Internship</span></h2>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-line"></div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+      <div class="glass-card timeline-card">
+        <span class="timeline-period">Pursuing · Semester 7</span>
+        <h3>B.Sc. IT — Cloud &amp; Application Development</h3>
+        <p class="timeline-org">Gujarat University, Ahmedabad</p>
+        <p>Specializing in cloud-native concepts and full‑stack application development,
+          with coursework and hands‑on projects centered on the MERN stack.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+      <div class="glass-card timeline-card">
+        <span class="timeline-period">Feb 2026 – Mar 2026</span>
+        <h3>Full Stack Development Intern</h3>
+        <p class="timeline-org">Grras IT Solutions</p>
+        <ul>
+          <li>Worked hands-on with MongoDB, Express.js, React.js and Node.js on real project tasks.</li>
+          <li>Developed responsive web pages and integrated backend REST APIs end-to-end.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="section" id="skills">
+  <div class="section-head reveal">
+    <p class="section-tag">03 · Toolbox</p>
+    <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+  </div>
+
+  <div class="skills-grid">
+    <div class="glass-card skills-card reveal">
+      <h3><i class="fa-solid fa-laptop-code"></i> Frontend</h3>
+      <div class="skill-bar"><div class="skill-info"><span>HTML5</span><span>90%</span></div>
+        <div class="bar-track"><div class="bar-fill" data-width="90"></div></div></div>
+      <div class="skill-bar"><div class="skill-info"><span>CSS3</span><span>85%</span></div>
+        <div class="bar-track"><div class="bar-fill" data-width="85"></div></div></div>
+      <div class="skill-bar"><div class="skill-info"><span>JavaScript</span><span>80%</span></div>
+        <div class="bar-track"><div class="bar-fill" data-width="80"></div></div></div>
+      <div class="skill-bar"><div class="skill-info"><span>React.js</span><span>82%</span></div>
+        <div class="bar-track"><div class="bar-fill" data-width="82"></div></div></div>
+    </div>
+
+    <div class="glass-card skills-card reveal">
+      <h3><i class="fa-solid fa-server"></i> Backend &amp; Database</h3>
+      <div class="skill-bar"><div class="skill-info"><span>Node.js</span><span>78%</span></div>
+        <div class="bar-track"><div class="bar-fill" data-width="78"></div></div></div>
+      <div class="skill-bar"><div class="skill-info"><span>Express.js</span><span>76%</span></div>
+        <div class="bar-track"><div class="bar-fill" data-width="76"></div></div></div>
+      <div class="skill-bar"><div class="skill-info"><span>MongoDB</span><span>75%</span></div>
+        <div class="bar-track"><div class="bar-fill" data-width="75"></div></div></div>
+      <div class="skill-bar"><div class="skill-info"><span>REST APIs</span><span>80%</span></div>
+        <div class="bar-track"><div class="bar-fill" data-width="80"></div></div></div>
+    </div>
+
+    <div class="glass-card skills-card reveal">
+      <h3><i class="fa-solid fa-toolbox"></i> Tools &amp; Workflow</h3>
+      <div class="skill-bar"><div class="skill-info"><span>Git &amp; GitHub</span><span>85%</span></div>
+        <div class="bar-track"><div class="bar-fill" data-width="85"></div></div></div>
+      <div class="skill-bar"><div class="skill-info"><span>Postman</span><span>80%</span></div>
+        <div class="bar-track"><div class="bar-fill" data-width="80"></div></div></div>
+      <div class="skill-bar"><div class="skill-info"><span>VS Code</span><span>92%</span></div>
+        <div class="bar-track"><div class="bar-fill" data-width="92"></div></div></div>
+      <div class="skill-bar"><div class="skill-info"><span>Responsive Design</span><span>84%</span></div>
+        <div class="bar-track"><div class="bar-fill" data-width="84"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section class="section" id="projects">
+  <div class="section-head reveal">
+    <p class="section-tag">04 · Work</p>
+    <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+  </div>
+
+  <div class="projects-grid">
+
+    <div class="project-card glass-card reveal">
+      <div class="project-glow"></div>
+      <div class="project-icon"><i class="fa-solid fa-users-gear"></i></div>
+      <h3>Employee Dashboard</h3>
+      <p>A React.js employee management dashboard with live search, multi-field filtering,
+        sorting and the ability to add new employees on the fly.</p>
+      <div class="project-tags">
+        <span>React.js</span><span>useState</span><span>useEffect</span><span>REST API</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="proj-link"><i class="fa-brands fa-github"></i> Code</a>
+        <a href="#" class="proj-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+      </div>
+    </div>
+
+    <div class="project-card glass-card reveal">
+      <div class="project-glow"></div>
+      <div class="project-icon"><i class="fa-solid fa-user-graduate"></i></div>
+      <h3>Student Management System</h3>
+      <p>Full CRUD system for managing student records — create, view, update and delete —
+        with clean form handling and controlled React state.</p>
+      <div class="project-tags">
+        <span>React.js</span><span>CRUD</span><span>Form Handling</span><span>State Mgmt</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="proj-link"><i class="fa-brands fa-github"></i> Code</a>
+        <a href="#" class="proj-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+      </div>
+    </div>
+
+    <div class="project-card glass-card reveal">
+      <div class="project-glow"></div>
+      <div class="project-icon"><i class="fa-solid fa-layer-group"></i></div>
+      <h3>MERN Stack Practice App</h3>
+      <p>End-to-end MERN application connecting a React frontend to a Node.js + Express backend,
+        with MongoDB persistence and custom REST API integration.</p>
+      <div class="project-tags">
+        <span>MongoDB</span><span>Express.js</span><span>React.js</span><span>Node.js</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="proj-link"><i class="fa-brands fa-github"></i> Code</a>
+        <a href="#" class="proj-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+      </div>
+    </div>
+
+    <div class="project-card glass-card reveal is-progress">
+      <div class="project-glow"></div>
+      <div class="project-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+      <h3>MERN E‑Commerce Store</h3>
+      <p>A shopping cart experience with product catalog, cart state and checkout flow —
+        currently in active development.</p>
+      <div class="project-tags">
+        <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>JWT</span>
+      </div>
+      <span class="status-badge"><i class="fa-solid fa-hammer"></i> In Progress</span>
+    </div>
+
+    <div class="project-card glass-card reveal is-progress">
+      <div class="project-glow"></div>
+      <div class="project-icon"><i class="fa-solid fa-list-check"></i></div>
+      <h3>Task Manager API</h3>
+      <p>A RESTful task-management API with authentication and role-based access,
+        built to sharpen backend architecture skills.</p>
+      <div class="project-tags">
+        <span>Express.js</span><span>MongoDB</span><span>JWT Auth</span><span>Postman</span>
+      </div>
+      <span class="status-badge"><i class="fa-solid fa-hammer"></i> In Progress</span>
+    </div>
+
+    <div class="project-card glass-card reveal is-progress">
+      <div class="project-glow"></div>
+      <div class="project-icon"><i class="fa-solid fa-cloud"></i></div>
+      <h3>Cloud Deployment Playground</h3>
+      <p>Exploring cloud deployment pipelines for MERN apps as part of the Cloud &amp;
+        Application Development specialization.</p>
+      <div class="project-tags">
+        <span>Cloud</span><span>CI/CD</span><span>MERN</span><span>DevOps</span>
+      </div>
+      <span class="status-badge"><i class="fa-solid fa-hammer"></i> In Progress</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="section" id="services">
+  <div class="section-head reveal">
+    <p class="section-tag">05 · What I Offer</p>
+    <h2 class="section-title">Services I Can <span class="gradient-text">Help With</span></h2>
+  </div>
+
+  <div class="services-grid">
+    <div class="glass-card service-card reveal">
+      <div class="service-icon"><i class="fa-brands fa-react"></i></div>
+      <h3>Frontend Development</h3>
+      <p>Responsive, component-driven UIs built with React.js, HTML5 and modern CSS.</p>
+    </div>
+    <div class="glass-card service-card reveal">
+      <div class="service-icon"><i class="fa-solid fa-plug"></i></div>
+      <h3>REST API Development</h3>
+      <p>Designing and building clean REST APIs with Node.js and Express.js.</p>
+    </div>
+    <div class="glass-card service-card reveal">
+      <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+      <h3>Database Design</h3>
+      <p>Structuring MongoDB schemas and queries for real-world CRUD applications.</p>
+    </div>
+    <div class="glass-card service-card reveal">
+      <div class="service-icon"><i class="fa-solid fa-diagram-project"></i></div>
+      <h3>Full Stack MERN Apps</h3>
+      <p>Connecting frontend, backend and database into one cohesive product.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CERTIFICATES ================= -->
+<section class="section" id="certificates">
+  <div class="section-head reveal">
+    <p class="section-tag">06 · Recognition</p>
+    <h2 class="section-title">Certificates &amp; <span class="gradient-text">Credentials</span></h2>
+  </div>
+
+  <div class="cert-grid">
+    <div class="glass-card cert-card reveal">
+      <div class="cert-ribbon"><i class="fa-solid fa-certificate"></i></div>
+      <h3>Full Stack Development Internship</h3>
+      <p class="cert-org">Grras IT Solutions · 2026</p>
+      <p>Completion certificate for hands-on MERN stack internship training.</p>
+    </div>
+    <div class="glass-card cert-card cert-placeholder reveal">
+      <div class="cert-ribbon"><i class="fa-solid fa-plus"></i></div>
+      <h3>Add Your Certificate</h3>
+      <p class="cert-org">Course / Platform · Year</p>
+      <p>Swap this card for a certificate — e.g. React, Node.js or MongoDB course.</p>
+    </div>
+    <div class="glass-card cert-card cert-placeholder reveal">
+      <div class="cert-ribbon"><i class="fa-solid fa-plus"></i></div>
+      <h3>Add Your Certificate</h3>
+      <p class="cert-org">Course / Platform · Year</p>
+      <p>Swap this card for a certificate — e.g. a cloud or DSA certification.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contact">
+  <div class="section-head reveal">
+    <p class="section-tag">07 · Get In Touch</p>
+    <h2 class="section-title">Let's Build Something <span class="gradient-text">Together</span></h2>
+  </div>
+
+  <div class="contact-grid">
+    <div class="glass-card contact-info reveal">
+      <h3>Contact Info</h3>
+      <a href="mailto:spbhatt1303@gmail.com" class="contact-row">
+        <i class="fa-solid fa-envelope"></i>
+        <div><span>Email</span><strong>spbhatt1303@gmail.com</strong></div>
+      </a>
+      <a href="tel:+916353375115" class="contact-row">
+        <i class="fa-solid fa-phone"></i>
+        <div><span>Phone</span><strong>+91 63533 75115</strong></div>
+      </a>
+      <a href="https://www.linkedin.com/in/sheelbhatt/" target="_blank" rel="noopener" class="contact-row">
+        <i class="fa-brands fa-linkedin-in"></i>
+        <div><span>LinkedIn</span><strong>/in/sheelbhatt</strong></div>
+      </a>
+      <a href="https://github.com/sheelbhatt" target="_blank" rel="noopener" class="contact-row">
+        <i class="fa-brands fa-github"></i>
+        <div><span>GitHub</span><strong>/sheelbhatt</strong></div>
+      </a>
+
+      <div class="contact-socials">
+        <a href="https://www.linkedin.com/in/sheelbhatt/" target="_blank" rel="noopener" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/sheelbhatt" target="_blank" rel="noopener" class="social-btn"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:spbhatt1303@gmail.com" class="social-btn"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <form class="glass-card contact-form reveal" id="contactForm" novalidate>
+      <h3>Send a Message</h3>
+
+      <div class="form-row">
+        <div class="form-group">
+          <input type="text" id="name" name="name" required placeholder=" " />
+          <label for="name">Your Name</label>
+          <span class="form-error">Please enter your name</span>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" required placeholder=" " />
+          <label for="email">Your Email</label>
+          <span class="form-error">Please enter a valid email</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="subject" name="subject" required placeholder=" " />
+        <label for="subject">Subject</label>
+        <span class="form-error">Please enter a subject</span>
+      </div>
+
+      <div class="form-group">
+        <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+        <label for="message">Message</label>
+        <span class="form-error">Please enter a message</span>
+      </div>
+
+      <button type="submit" class="btn btn-primary form-submit">
+        <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> Send Message</span>
+        <span class="btn-loading"><i class="fa-solid fa-spinner fa-spin"></i> Sending...</span>
+      </button>
+
+      <div class="form-success" id="formSuccess">
+        <i class="fa-solid fa-circle-check"></i> Message sent! I'll get back to you soon.
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="#home" class="logo">
+      <span class="logo-bracket">&lt;</span>Sheel<span class="logo-accent">.dev</span><span class="logo-bracket">/&gt;</span>
+    </a>
+    <p>Designed &amp; built by Sheel Bhatt · Full Stack MERN Developer</p>
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/sheelbhatt/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/sheelbhatt" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:spbhatt1303@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> Sheel Bhatt. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ================= SCROLL TO TOP ================= -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
